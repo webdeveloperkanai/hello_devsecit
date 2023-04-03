@@ -1,9 +1,26 @@
 library hello_devsecit;
 
-export './Sdk/Elemets.dart';
+import 'package:flutter/material.dart';
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
+export './Sdk/H1.dart';
+export './Sdk/H2.dart';
+export './Sdk/H3.dart';
+export './Sdk/Paragraph.dart';
+export './Sdk/HTTP/http.dart';
+
+go(context, page) {
+  Navigator.push(context, MaterialPageRoute(builder: (context) => page));
+}
+
+goReplace(context, page) {
+  Navigator.pushReplacement(
+      context, MaterialPageRoute(builder: (context) => page));
+}
+
+goNamed(context, page) {
+  Navigator.pushNamed(context, page);
+}
+
+goNamedReplace(context, page) {
+  Navigator.pushReplacementNamed(context, page);
 }
