@@ -7,6 +7,7 @@ export './Sdk/H2.dart';
 export './Sdk/H3.dart';
 export './Sdk/Paragraph.dart';
 export './Sdk/HTTP/http.dart';
+export './Nav/BottomBar.dart';
 
 go(context, page) {
   Navigator.push(context, MaterialPageRoute(builder: (context) => page));
