@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_interpolation_to_compose_strings
+
 library hello_devsecit;
 
 import 'package:flutter/material.dart';
@@ -24,4 +26,13 @@ goNamed(context, page) {
 
 goNamedReplace(context, page) {
   Navigator.pushReplacementNamed(context, page);
+}
+
+class DSIHexColor extends Color {
+  static int _getColor(String hex) {
+    String formattedHex = "FF" + hex.toUpperCase().replaceAll("#", "");
+    return int.parse(formattedHex, radix: 16);
+  }
+
+  DSIHexColor(final String hex) : super(_getColor(hex));
 }
