@@ -1,6 +1,8 @@
+// ignore_for_file: non_constant_identifier_names, prefer_const_constructors, sized_box_for_whitespace, file_names
+
 import 'package:flutter/material.dart';
 
-devProressDialog(context) {
+DSIProressDialog(context) {
   showDialog(
     context: context,
     builder: (_) => AlertDialog(
@@ -18,22 +20,34 @@ devProressDialog(context) {
   );
 }
 
-devAlertDialog(context, text) {
+DSIAlertDialog(context, String text, Function onPressed) {
   showDialog(
     context: context,
     builder: (_) => AlertDialog(
       content: Text(text),
-      actions: [TextButton(onPressed: () {}, child: Text("Ok"))],
+      actions: [
+        TextButton(
+            onPressed: () {
+              onPressed();
+            },
+            child: Text("Ok"))
+      ],
     ),
   );
 }
 
-devErrorDialog(context, text) {
+DSIErrorDialog(context, String text, Function onPressed) {
   showDialog(
     context: context,
     builder: (_) => AlertDialog(
       content: Text(text),
-      actions: [TextButton(onPressed: () {}, child: Text("Try again later"))],
+      actions: [
+        TextButton(
+            onPressed: () {
+              onPressed();
+            },
+            child: Text("Try again later"))
+      ],
     ),
   );
 }

@@ -1,7 +1,9 @@
+// ignore_for_file: must_be_immutable, prefer_typing_uninitialized_variables, file_names
+
 import 'package:flutter/material.dart';
 
-class DevBottomNav extends StatelessWidget {
-  DevBottomNav({super.key, this.height, required this.items, this.color});
+class DSIBottomNav extends StatelessWidget {
+  DSIBottomNav({super.key, this.height, required this.items, this.color});
   final height, color;
   Widget items;
   @override
