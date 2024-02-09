@@ -1,7 +1,7 @@
 name: hello_devsecit
 description: "A new Flutter plugin project."
-version: 0.0.1
-homepage:
+version: 0.0.9
+homepage: https://devsecit.com
 
 environment:
   sdk: '>=3.2.6 <4.0.0'
