@@ -2,7 +2,7 @@
 
 import 'package:http/http.dart' as http;
 
-Future<http.Response> PostRequest(String API, Object BODY) async {
+Future<http.Response> DSIPostRequest(String API, Object BODY) async {
   http.Response resp = await http.post(Uri.parse(API), body: BODY);
   return resp;
 }

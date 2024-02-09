@@ -1,8 +1,10 @@
 // ignore_for_file: prefer_interpolation_to_compose_strings
 
-library hello_devsecit;
-
 import 'package:flutter/material.dart';
+
+import 'hello_devsecit_platform_interface.dart';
+
+ 
 
 export './Sdk/H1.dart';
 export './Sdk/H2.dart';
@@ -35,4 +37,15 @@ class DSIHexColor extends Color {
   }
 
   DSIHexColor(final String hex) : super(_getColor(hex));
+}
+
+
+class HelloDevsecit {
+  Future<String?> getPlatformVersion() {
+    return HelloDevsecitPlatform.instance.getPlatformVersion();
+  }
+
+  Future<String?> getAndroidId() {
+    return HelloDevsecitPlatform.instance.getAndroidId();
+  }
 }

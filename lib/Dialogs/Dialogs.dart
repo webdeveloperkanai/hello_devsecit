@@ -28,9 +28,32 @@ DSIAlertDialog(context, String text, Function onPressed) {
       actions: [
         TextButton(
             onPressed: () {
+              Navigator.pop(context);
               onPressed();
             },
             child: Text("Ok"))
+      ],
+    ),
+  );
+}
+
+DSIConfirmDialog(context, String text, Function onPressed) {
+  showDialog(
+    context: context,
+    builder: (_) => AlertDialog(
+      content: Text(text),
+      actions: [
+        TextButton(
+            onPressed: () {
+              Navigator.pop(context);
+              onPressed();
+            },
+            child: Text("Ok")),
+        TextButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: Text("Cancel")),
       ],
     ),
   );
