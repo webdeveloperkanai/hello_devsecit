@@ -1,4 +1,14 @@
 # hello_devsecit
+
+### Ussage 
+Add dependency - 
+<code>
+hello_devsecit:
+  git:
+    url: https://github.com/webdeveloperkanai/hello_devsecit
+</code>
+
+### Features and functions 
 1. androidId
 2. H1
 3. H2
@@ -16,7 +26,9 @@
 15. DSI_TEXT_BOX
 16. DSI_PASSWORD_BOX
 17. DSI_NUMBER_BOX
-18. DSIHexColor [converts # color code to flutter usable color code]
+18. DSIHexColor (converts # color code to flutter usable color code)
 19. DSI_DRAWER_GO
 20. DSI_DRAWER_GO_NAMED
 21. DSIBottomNav 
+
+### @webdeveloperkanai  - https://devsecit.com (visit for more info)
