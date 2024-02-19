@@ -3,18 +3,21 @@
 import 'package:flutter/material.dart';
 
 class Paragraph extends StatelessWidget {
-  var text, color, fontWeight, fontSize;
-  Paragraph(
-      {super.key,
-      required this.text,
-      this.color,
-      this.fontWeight,
-      this.fontSize});
+  var text, color, fontWeight, fontSize, textAlign;
+  Paragraph({
+    super.key,
+    required this.text,
+    this.color,
+    this.fontWeight,
+    this.fontSize,
+    this.textAlign,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
+      textAlign: textAlign ?? TextAlign.start,
       style: TextStyle(
           color: color ?? Colors.black,
           fontSize: fontSize.toString() != "null"
