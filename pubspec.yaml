@@ -1,8 +1,8 @@
 name: hello_devsecit
-description: "hello_devsecit is the package for quick building with multiple method supports"
+description: "hello_devsecit is the package for quick ui and backend building with multiple method supports."
 
-version: 0.1.0
-homepage: https://devsecit.com
+version: 0.1.1
+homepage: https://devsecit.com/flutter/plugins/hello_devsecit
 
 environment:
   sdk: '>=3.2.6 <4.0.0'
@@ -12,7 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   plugin_platform_interface: ^2.0.2
-  http: any
+  http: ^1.2.0
 
 dev_dependencies:
   flutter_test:
@@ -39,6 +39,12 @@ flutter:
       android:
         package: com.devsecit.hello_devsecit
         pluginClass: HelloDevsecitPlugin
+      ios:
+        pluginClass: HelloDevsecitPlugin
+      macos:
+        pluginClass: HelloDevsecitPlugin
+      web:
+        pluginClass: HelloDevsecitPlugin 
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

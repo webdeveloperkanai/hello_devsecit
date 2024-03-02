@@ -3,21 +3,27 @@
 import 'package:flutter/material.dart';
 
 class DSIBottomNav extends StatelessWidget {
-  DSIBottomNav({super.key, this.height, required this.items, this.color});
+  DSIBottomNav({
+    super.key,
+    this.height,
+    required this.items,
+    this.color,
+    this.navAlignment,
+  });
   final height, color;
-  
-  Widget items;
+  var navAlignment;
+  final List<Widget> items;
   @override
   Widget build(BuildContext context) {
     return Container(
+      alignment: navAlignment ?? Alignment.center,
       height: height ?? 70,
       width: MediaQuery.of(context).size.width,
-      decoration: BoxDecoration(
-          color:   color ?? Colors.white),
+      decoration: BoxDecoration(color: color ?? Colors.white),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: [items],
+        children: items,
       ),
     );
   }
@@ -48,7 +54,7 @@ class DSI_BOTTOM_NAV_BUTTON extends StatelessWidget {
           Icon(
             icon,
             size: iconSize ?? 16,
-            color: isActive.toString() != "null"
+            color: isActive.toString() != "null" && isActive
                 ? activeColor ?? Colors.blue
                 : defaultColor ?? Color.fromARGB(255, 4, 21, 34),
           ),
@@ -57,7 +63,7 @@ class DSI_BOTTOM_NAV_BUTTON extends StatelessWidget {
               label,
               style: textStyle ??
                   TextStyle(
-                    color: isActive.toString() != "null"
+                    color: isActive.toString() != "null" && isActive
                         ? activeColor ?? Colors.blue
                         : defaultColor ?? Color.fromARGB(255, 4, 21, 34),
                   ),

@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_interpolation_to_compose_strings
+// ignore_for_file: prefer_interpolation_to_compose_strings, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 

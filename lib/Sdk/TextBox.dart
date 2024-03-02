@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable, camel_case_types
+// ignore_for_file: must_be_immutable, camel_case_types, file_names, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
 
