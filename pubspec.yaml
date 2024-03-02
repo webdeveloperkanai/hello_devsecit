@@ -39,16 +39,19 @@ flutter:
       android:
         package: com.devsecit.hello_devsecit
         pluginClass: HelloDevsecitPlugin
+        fileName: hello_devsecit.dart
       ios:
         pluginClass: HelloDevsecitPlugin
+        fileName: hello_devsecit.dart
       macos:
         pluginClass: HelloDevsecitPlugin
+        fileName: hello_devsecit.dart
       web:
         pluginClass: HelloDevsecitPlugin 
+        fileName: hello_devsecit.dart
       linux:
-        pluginClass: HelloDevsecitPlugin 
-
-    fileName: hello_devsecit.dart
+        pluginClass: HelloDevsecitPlugin
+        fileName: hello_devsecit.dart
       
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
