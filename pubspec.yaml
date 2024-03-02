@@ -1,7 +1,7 @@
 name: hello_devsecit
 description: "hello_devsecit is the package for quick ui and backend building with multiple method supports."
 
-version: 0.1.1
+version: 0.1.2
 homepage: https://devsecit.com/flutter/plugins/hello_devsecit
 
 environment:
@@ -45,7 +45,11 @@ flutter:
         pluginClass: HelloDevsecitPlugin
       web:
         pluginClass: HelloDevsecitPlugin 
+      linux:
+        pluginClass: HelloDevsecitPlugin 
 
+    fileName: lib/hello_devsecit.dart
+      
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

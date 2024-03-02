@@ -3,15 +3,14 @@
 import 'package:flutter/material.dart';
 
 class DSI_PERCENT_INDICATOR extends StatelessWidget {
-  DSI_PERCENT_INDICATOR({
-    super.key,
-    this.backgroundColor,
-    this.borderradius,
-    this.color,
-    this.height,
-    this.width,
-    required this.percentage
-  });
+  DSI_PERCENT_INDICATOR(
+      {super.key,
+      this.backgroundColor,
+      this.borderradius,
+      this.color,
+      this.height,
+      this.width,
+      required this.percentage});
   var height, width, color, borderradius, backgroundColor;
   final double percentage;
   @override

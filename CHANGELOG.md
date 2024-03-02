@@ -1,3 +1,6 @@
+## 0.1.2
+1. Crash fixed
+
 ## 0.1.1
 1. DSIBottomNav - alignment added
 2. DSI_BOTTOM_NAV_BUTTON - color added
