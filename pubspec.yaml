@@ -1,7 +1,7 @@
 name: hello_devsecit
 description: "hello_devsecit is the package for quick ui and backend building with multiple method supports."
 
-version: 0.1.3
+version: 0.1.4
 homepage: https://devsecit.com/flutter/plugins/hello_devsecit
 
 environment:
@@ -12,7 +12,9 @@ dependencies:
   flutter:
     sdk: flutter
   plugin_platform_interface: ^2.0.2
-  http: ^1.2.0
+  http: ^1.2.0  
+  flutter_web_plugins:
+    sdk: flutter
 
 dev_dependencies:
   flutter_test:
@@ -47,8 +49,8 @@ flutter:
         pluginClass: HelloDevsecitPlugin
         fileName: hello_devsecit.dart
       web:
-        pluginClass: HelloDevsecitPlugin 
-        fileName: hello_devsecit.dart
+        pluginClass: HelloDevsecitWeb 
+        fileName: hello_devsecit_web.dart
       linux:
         pluginClass: HelloDevsecitPlugin
         fileName: hello_devsecit.dart

@@ -1,8 +1,9 @@
-// ignore_for_file: prefer_interpolation_to_compose_strings, non_constant_identifier_names
+import 'dart:html' as html show window;
 
-import 'package:flutter/material.dart'; 
+import 'package:flutter/material.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
+
 import 'hello_devsecit_platform_interface.dart';
-
 export './Sdk/H1.dart';
 export './Sdk/H2.dart';
 export './Sdk/H3.dart';
@@ -11,6 +12,23 @@ export './Sdk/HTTP/http.dart';
 export './Nav/BottomBar.dart';
 export './Sdk/Buttons.dart';
 export './Sdk/TextBox.dart';
+
+/// A web implementation of the DsiProuiPlatform of the DsiProui plugin.
+class HelloDevsecitWeb extends HelloDevsecitPlatform {
+  /// Constructs a DsiProuiWeb
+  HelloDevsecitWeb();
+
+  static void registerWith(Registrar registrar) {
+    HelloDevsecitPlatform.instance = HelloDevsecitWeb();
+  }
+
+  /// Returns a [String] containing the version of the platform.
+  @override
+  Future<String?> getPlatformVersion() async {
+    final version = html.window.navigator.userAgent;
+    return version;
+  }
+}
 
 go(context, page) {
   Navigator.push(context, MaterialPageRoute(builder: (context) => page));
