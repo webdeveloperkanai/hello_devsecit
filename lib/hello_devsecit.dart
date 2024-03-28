@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_interpolation_to_compose_strings, non_constant_identifier_names
 
-import 'package:flutter/material.dart'; 
+import 'package:flutter/material.dart';
 import 'hello_devsecit_platform_interface.dart';
 
 export './Sdk/H1.dart';
@@ -27,6 +27,10 @@ goNamed(context, page) {
 
 goNamedReplace(context, page) {
   Navigator.pushReplacementNamed(context, page);
+}
+
+goBack(context) {
+  Navigator.pop(context);
 }
 
 DSI_DRAWER_GO(context, page) {

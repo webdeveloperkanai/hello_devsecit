@@ -1,3 +1,13 @@
+## 0.1.5
+1. Updated DSI_TEXT_BOX
+2. Added DSI_TEXT_BOX_WITH_VALUE
+3. Removed DSI_PASSWORD_BOX
+4. Removed DSI_NUMBER_BOX
+5. Added goBackWeb()
+6. Added setWebTitle(title)
+7. Added Button height, width inbuilt
+8. Added H4
+
 ## 0.1.4
 1. web feature added
 

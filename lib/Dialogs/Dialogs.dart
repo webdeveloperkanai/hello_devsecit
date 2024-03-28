@@ -27,11 +27,10 @@ DSIAlertDialog(context, String text, Function onPressed) {
       content: Text(text),
       actions: [
         TextButton(
-            onPressed: () {
-              Navigator.pop(context);
+            onPressed: () { 
               onPressed();
             },
-            child: Text("Ok"))
+            child: Text("OK"))
       ],
     ),
   );

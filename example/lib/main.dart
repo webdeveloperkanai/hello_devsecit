@@ -1,8 +1,9 @@
-// ignore_for_file: sized_box_for_whitespace
+// ignore_for_file: sized_box_for_whitespace, prefer_const_constructors, avoid_web_libraries_in_flutter, unused_import
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:hello_devsecit/hello_devsecit.dart';
+import 'dart:html' as html; 
+import 'package:hello_devsecit/hello_devsecit_web.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,18 +11,16 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Hello DSI DEMO',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Demo Home Page'),
     );
   }
 }
@@ -66,7 +65,9 @@ class _MyHomePageState extends State<MyHomePage> {
               width: 250,
               child: DSI_PRIMARY_BUTTON(
                 title: "Primary Button",
-                onPressed: () {},
+                onPressed: () {
+                  setWebTitle("This is new title");
+                },
                 borderradius: BorderRadius.circular(10),
               ),
             ),

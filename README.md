@@ -1,4 +1,4 @@
-# hello_devsecit 0.1.1
+# hello_devsecit 0.1.5
 
 ### Ussage 
 Add dependency - 
@@ -22,23 +22,25 @@ dependencies:
 2. H1
 3. H2
 4. H3
-5. Paragraph
-6. DSIPostRequest
-7. AlertDialog
-8. Progressbar
-9. Confirmation Dialog
-10. Navigator, go, goNamed, goReplace, goNamedReplace
-11. DSI_PRIMARY_BUTTON
-12. DSI_SECONDARY_BUTTON
-13. DSI_ICON_BUTTON
-14. DSI_PERCENT_INDICATOR
-15. DSI_TEXT_BOX
-16. DSI_PASSWORD_BOX
-17. DSI_NUMBER_BOX
-18. DSIHexColor (converts # color code to flutter usable color code)
-19. DSI_DRAWER_GO
-20. DSI_DRAWER_GO_NAMED
-21. DSIBottomNav 
+5. H4 
+6. Paragraph
+7. DSIPostRequest
+8. AlertDialog
+9. Progressbar
+10. Confirmation Dialog
+11. Navigator, go, goNamed, goReplace, goNamedReplace
+12. DSI_PRIMARY_BUTTON
+13. DSI_SECONDARY_BUTTON
+14. DSI_ICON_BUTTON
+15. DSI_PERCENT_INDICATOR
+16. DSI_TEXT_BOX
+17. DSI_TEXT_BOX_WITH_VALUE
+18. goBackWeb()
+19. DSIHexColor (converts # color code to flutter usable color code)
+20. DSI_DRAWER_GO
+21. DSI_DRAWER_GO_NAMED
+22. DSIBottomNav 
+23. goBack(context) 
 
 ### @webdeveloperkanai  - https://devsecit.com (visit for more info)
 

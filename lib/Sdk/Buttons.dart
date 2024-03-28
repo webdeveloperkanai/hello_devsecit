@@ -13,10 +13,21 @@ class DSI_PRIMARY_BUTTON extends StatelessWidget {
     this.width,
     required this.onPressed,
     this.alignment,
+    this.border,
+    this.fontSize,
+    this.fontWeight,
   });
   final String title;
   final Function onPressed;
-  var height, width, buttonColor, borderradius, textColor, alignment;
+  var height,
+      width,
+      buttonColor,
+      borderradius,
+      textColor,
+      alignment,
+      fontSize,
+      border,
+      fontWeight;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -25,15 +36,20 @@ class DSI_PRIMARY_BUTTON extends StatelessWidget {
       },
       child: Container(
         alignment: alignment ?? Alignment.center,
-        height: height ?? 45,
-        width: width ?? MediaQuery.of(context).size.width,
+        height: double.parse(height) ?? 45,
+        width: double.parse(width) ?? MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           color: buttonColor ?? Colors.blue,
           borderRadius: borderradius ?? BorderRadius.circular(35),
+          border: border ?? Border.all(color: Colors.white),
         ),
         child: Text(
           title.toString(),
-          style: TextStyle(color: textColor ?? Colors.white),
+          style: TextStyle(
+            color: textColor ?? Colors.white,
+            fontSize: fontSize ?? 14,
+            fontWeight: fontWeight ?? FontWeight.normal,
+          ),
         ),
       ),
     );
@@ -41,19 +57,31 @@ class DSI_PRIMARY_BUTTON extends StatelessWidget {
 }
 
 class DSI_SECONDARY_BUTTON extends StatelessWidget {
-  DSI_SECONDARY_BUTTON(
-      {super.key,
-      required this.title,
-      this.borderradius,
-      this.buttonColor,
-      this.height,
-      this.textColor,
-      this.width,
-      required this.onPressed,
-      this.alignment});
+  DSI_SECONDARY_BUTTON({
+    super.key,
+    required this.title,
+    this.borderradius,
+    this.buttonColor,
+    this.height,
+    this.textColor,
+    this.width,
+    required this.onPressed,
+    this.alignment,
+    this.border,
+    this.fontSize,
+    this.fontWeight,
+  });
   final String title;
   final Function onPressed;
-  var height, width, buttonColor, borderradius, textColor, alignment;
+  var height,
+      width,
+      buttonColor,
+      borderradius,
+      textColor,
+      alignment,
+      fontSize,
+      border,
+      fontWeight;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -67,10 +95,15 @@ class DSI_SECONDARY_BUTTON extends StatelessWidget {
         decoration: BoxDecoration(
           color: buttonColor ?? Color.fromARGB(255, 109, 106, 106),
           borderRadius: borderradius ?? BorderRadius.circular(35),
+          border: border ?? Border.all(color: Colors.white),
         ),
         child: Text(
           title.toString(),
-          style: TextStyle(color: textColor ?? Colors.white),
+          style: TextStyle(
+            color: textColor ?? Colors.white,
+            fontSize: fontSize ?? 14,
+            fontWeight: fontWeight ?? FontWeight.normal,
+          ),
         ),
       ),
     );

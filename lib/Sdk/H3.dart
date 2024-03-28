@@ -31,3 +31,33 @@ class H3 extends StatelessWidget {
     );
   }
 }
+
+class H4 extends StatelessWidget {
+  var text, color, fontWeight, fontSize, textAlign, fontFamily;
+  H4({
+    super.key,
+    required this.text,
+    this.color,
+    this.fontWeight,
+    this.textAlign,
+    this.fontSize,
+    this.fontFamily,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      textAlign: textAlign ?? TextAlign.start,
+      style: TextStyle(
+        color: color ?? Colors.black,
+        fontSize: fontSize.toString() != "null"
+            ? double.parse(fontSize.toString())
+            : double.parse("15"),
+        fontWeight: fontWeight ?? FontWeight.w500,
+        fontFamily: fontFamily ?? "Airal",
+      ),
+      softWrap: true,
+    );
+  }
+}
