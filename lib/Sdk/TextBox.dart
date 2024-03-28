@@ -94,8 +94,10 @@ class DSI_TEXT_BOX_WITH_VALUE extends StatelessWidget {
       height: height ?? 55,
       width: width ?? 230,
       child: TextFormField(
-        obscureText: isPassword ?? false,
-        keyboardType: isNumber ? TextInputType.number : TextInputType.text,
+        obscureText: isPassword.toString() == "true" ? true : false,
+        keyboardType: isNumber.toString() == "true"
+            ? TextInputType.number
+            : TextInputType.text,
         textAlign: textAlign ?? TextAlign.start,
         textAlignVertical: textAlignVertical ?? TextAlignVertical.bottom,
         initialValue: initialValue ?? "",
