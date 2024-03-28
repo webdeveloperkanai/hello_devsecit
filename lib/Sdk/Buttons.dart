@@ -36,8 +36,8 @@ class DSI_PRIMARY_BUTTON extends StatelessWidget {
       },
       child: Container(
         alignment: alignment ?? Alignment.center,
-        height: double.parse(height) ?? 45,
-        width: double.parse(width) ?? MediaQuery.of(context).size.width,
+        height: height ?? 45,
+        width: width ?? MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           color: buttonColor ?? Colors.blue,
           borderRadius: borderradius ?? BorderRadius.circular(35),

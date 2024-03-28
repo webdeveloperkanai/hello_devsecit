@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:hello_devsecit/hello_devsecit.dart';
-import 'dart:html' as html; 
+import 'dart:html' as html;
 import 'package:hello_devsecit/hello_devsecit_web.dart';
 
 void main() {
@@ -35,6 +35,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  TextEditingController name = TextEditingController();
+  TextEditingController phone = TextEditingController();
+  TextEditingController password = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,6 +82,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {},
                 borderradius: BorderRadius.circular(10),
               ),
+            ),
+            SizedBox(height: 15),
+            DSI_TEXT_BOX(
+              width: 330,
+              height: 50,
+              controller: name,
+              label: "My Name",
             ),
           ],
         ),

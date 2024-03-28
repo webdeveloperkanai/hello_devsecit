@@ -16,7 +16,8 @@ class DSI_TEXT_BOX extends StatelessWidget {
       this.textAlign,
       this.textAlignVertical,
       this.isNumber,
-      this.isPassword});
+      this.isPassword,
+      this.decoration});
   var label,
       border,
       borderradius,
@@ -28,49 +29,51 @@ class DSI_TEXT_BOX extends StatelessWidget {
       textAlign,
       textAlignVertical,
       isNumber,
-      isPassword;
+      isPassword,
+      decoration;
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: height ?? 55,
+      height: height ?? 45,
       width: width ?? 230,
       child: TextFormField(
-        obscureText: isPassword ?? false,
-        keyboardType: isNumber ? TextInputType.number : TextInputType.text,
+        obscureText: isPassword.toString() == "true" ? true : false,
+        keyboardType: isNumber.toString() == "true"
+            ? TextInputType.number
+            : TextInputType.text,
         textAlign: textAlign ?? TextAlign.start,
-        textAlignVertical: textAlignVertical ?? TextAlignVertical.bottom,
+        textAlignVertical: textAlignVertical ?? TextAlignVertical.center,
         controller: controller,
-        decoration: InputDecoration(
-          prefixIcon: prefix ?? SizedBox(width: 0),
-          suffixIcon: suffix ?? SizedBox(width: 0),
-          label: Text(label ?? ""),
-          border: border ??
-              OutlineInputBorder(
-                borderRadius: borderradius ?? BorderRadius.circular(35),
-              ),
-        ),
+        decoration: decoration ??
+            InputDecoration(
+              label: Text(label ?? ""),
+              border: border ??
+                  OutlineInputBorder(
+                    borderRadius: borderradius ?? BorderRadius.circular(35),
+                  ),
+            ),
       ),
     );
   }
 }
 
 class DSI_TEXT_BOX_WITH_VALUE extends StatelessWidget {
-  DSI_TEXT_BOX_WITH_VALUE({
-    super.key,
-    this.label,
-    this.border,
-    this.borderradius,
-    this.prefix,
-    this.suffix,
-    this.height,
-    this.width,
-    this.textAlign,
-    this.textAlignVertical,
-    this.isNumber,
-    this.isPassword,
-    required this.onChanged,
-    required this.initialValue,
-  });
+  DSI_TEXT_BOX_WITH_VALUE(
+      {super.key,
+      this.label,
+      this.border,
+      this.borderradius,
+      this.prefix,
+      this.suffix,
+      this.height,
+      this.width,
+      this.textAlign,
+      this.textAlignVertical,
+      this.isNumber,
+      this.isPassword,
+      required this.onChanged,
+      required this.initialValue,
+      this.decoration});
   var label,
       border,
       borderradius,
@@ -82,7 +85,8 @@ class DSI_TEXT_BOX_WITH_VALUE extends StatelessWidget {
       textAlignVertical,
       isNumber,
       isPassword,
-      initialValue;
+      initialValue,
+      decoration;
   Function onChanged;
   @override
   Widget build(BuildContext context) {
@@ -98,16 +102,15 @@ class DSI_TEXT_BOX_WITH_VALUE extends StatelessWidget {
         onChanged: (v) {
           onChanged();
         },
-        decoration: InputDecoration(
-          prefixIcon: prefix ?? SizedBox(width: 0),
-          suffixIcon: suffix ?? SizedBox(width: 0),
-          label: Text(label ?? ""),
-          border: border ??
-              OutlineInputBorder(
-                borderRadius: borderradius ?? BorderRadius.circular(35),
-              ),
-        ),
+        decoration: decoration ??
+            InputDecoration(
+              label: Text(label ?? ""),
+              border: border ??
+                  OutlineInputBorder(
+                    borderRadius: borderradius ?? BorderRadius.circular(35),
+                  ),
+            ),
       ),
     );
   }
-} 
+}
