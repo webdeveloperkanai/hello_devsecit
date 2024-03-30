@@ -1,6 +1,7 @@
-// ignore_for_file: must_be_immutable, prefer_typing_uninitialized_variables, file_names, camel_case_types, prefer_const_constructors
+// ignore_for_file: must_be_immutable, prefer_typing_uninitialized_variables, file_names, camel_case_types, prefer_const_constructors, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+import 'package:hello_devsecit/Sdk/Percent_indicator.dart';
 
 class DSIBottomNav extends StatelessWidget {
   DSIBottomNav({
@@ -9,9 +10,10 @@ class DSIBottomNav extends StatelessWidget {
     required this.items,
     this.color,
     this.navAlignment,
+    this.padding,
   });
   final height, color;
-  var navAlignment;
+  var navAlignment, padding;
   final List<Widget> items;
   @override
   Widget build(BuildContext context) {
@@ -20,10 +22,14 @@ class DSIBottomNav extends StatelessWidget {
       height: height ?? 70,
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(color: color ?? Colors.white),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: items,
+      padding: padding ?? EdgeInsets.all(15),
+      child: Container(
+        height: height ?? 70,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: items,
+        ),
       ),
     );
   }

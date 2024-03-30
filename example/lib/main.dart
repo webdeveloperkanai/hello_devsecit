@@ -93,6 +93,35 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+      bottomNavigationBar: DSIBottomNav(
+        color: Colors.amber,
+        items: [
+          DSI_BOTTOM_NAV_BUTTON(
+            icon: Icons.home,
+            onPressed: () {},
+            defaultColor: Colors.white,
+            label: "Home",
+            activeColor: Colors.blue,
+            isActive: true,
+          ),
+          DSI_BOTTOM_NAV_BUTTON(
+            icon: Icons.trending_up_rounded,
+            onPressed: () {},
+            defaultColor: Colors.white,
+            label: "Trending",
+            activeColor: Colors.blue,
+            isActive: false,
+          ),
+          DSI_BOTTOM_NAV_BUTTON(
+            icon: Icons.settings,
+            onPressed: () {},
+            defaultColor: Colors.white,
+            label: "Profile",
+            activeColor: Colors.blue,
+            isActive: false,
+          ),
+        ],
+      ),
     );
   }
 }
