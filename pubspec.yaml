@@ -1,7 +1,7 @@
 name: hello_devsecit
 description: "hello_devsecit is the package for quick ui and backend building with multiple method supports."
 
-version: 0.1.5
+version: 0.1.6
 homepage: https://devsecit.com/flutter/plugins/hello_devsecit
 
 environment:
